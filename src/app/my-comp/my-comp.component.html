@@ -1,0 +1,58 @@
+<p>my-comp works!</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam iusto, animi atque ex doloremque repellat quae soluta quisquam officiis commodi voluptas molestias dolorem nisi rem autem dolorum error? Accusamus, laudantium?</p>
+<button (click)="decre()" type="button">--</button>
+<span>{{count}}</span>
+<button (click)="incre()" type="button">++</button><br>
+<span *ngIf="count>0">Greater than 0</span><br>
+<span *ngIf="count==0">oops 0</span><br>
+<span *ngIf="count<0">going down from 0</span>
+<ul>
+  <li *ngFor="let fal of fruits">{{fal+" Noob"}}</li>
+</ul>
+{{nom}}
+
+<span  *ngFor="let stud of students">{{stud.name+" "+stud.age+" "+stud.div}} <br> </span>
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  table,
+  th,
+  td {
+    border: 1px solid black;
+  }
+  thead {
+    background-color: #1c87c9;
+    color: #ffffff;
+  }
+  th {
+    text-align: center;
+    height: 50px;
+  }
+  tbody tr:nth-child(odd) {
+    background: #ffffff;
+  }
+  tbody tr:nth-child(even) {
+    background: #f4f4f4;
+  }
+</style>
+
+<table>
+  <thead>
+    <tr>
+      <th>Club name</th>
+      <th>club cat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let stud of clubs">
+      <td>{{stud.club_name}}</td>
+      <td>{{stud.cat}}</td>
+      <!-- <td>Some text</td> -->
+    </tr>
+
+  </tbody>
+</table>
+<br>
+<app-newcomp></app-newcomp>
