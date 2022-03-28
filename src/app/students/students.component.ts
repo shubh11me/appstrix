@@ -13,9 +13,10 @@ allStudents=[];
   ngOnInit(): void {
     this.serv.getStudents().subscribe(
       (res:any)=>{
-      this.allStudents=res.data;
-
-      console.log(this.allStudents)
+        console.log(res)
+    //  this.allStudents=res.data;
+this.allStudents=res.data;
+      // console.log(this.allStudents)
       },
       (err)=>{console.log(err)}
     )

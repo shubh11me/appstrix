@@ -17,7 +17,6 @@ export class MyserviceService {
   decre() {
     this.count = this.count - 1;
     console.log(this.count)
-
   }
   sum(a, b) {
     return a + b;
@@ -27,12 +26,13 @@ export class MyserviceService {
     return word.length;
   }
 url="http://localhost/PracticeProjects/tut/crud/API/";
-registerStudent(data){
- return this.http.post(this.url+"create.php",data)
+
+registerStudent(studentData){
+ return this.http.post("http://localhost/PracticeProjects/tut/crud/API/create.php",studentData);
 }
 
 getStudents(){
-  return this.http.get(this.url+"read.php");
+  return this.http.get("http://localhost/PracticeProjects/tut/crud/API/read.php");
 }
 
 }
